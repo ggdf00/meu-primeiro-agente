@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "$env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User'); Set-Location 'C:\\Users\\hidro\\Documents\\Arquivos Claude\\meu-primeiro-agente'; git add -A; $status = git status --porcelain; if ($status) { git commit -m 'auto: update from Claude Code'; git push }",
+            "statusMessage": "Sincronizando com GitHub...",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}
