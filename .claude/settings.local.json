@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(winget install *)",
+      "PowerShell(gh auth *)",
+      "PowerShell(git *)",
+      "Skill(update-config)"
+    ]
+  }
+}
